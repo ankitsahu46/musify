@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify - a mini music player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="brand"><h1>Musify</h1></li>
+                <li>Home</li>
+                <li id="album">Album
+                    <div class="slide">
+                        <div class="cat cat1" id="bollySongs">Bollywood songs</div>
+                        <div class="cat cat2" id="bhajan">FavSongs</div>
+                    </div>
+                </li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="songContainer">
+            <div class="h2">
+                <h2>Musify Songs</h2>
+            </div>
+            <div class="songListCon">
+                <div class="songList">
+                    <!-- we will insert song items here using javscript -->
+                </div>
+            </div>
+            <div class="songThumbnail">
+                <img src="defaultbg.jpg" alt="" id="thumbImg">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="playSong">
+            <input type="range" id="songProgressBar" name="songPlay" min="0" max="1000" value="0" smooth=yes>
+            <div class="songInfo">
+                <div>
+                    <img src="playing.gif" alt="" id="gif"><span id="curSongName"></span>
+                </div>
+                <div class="songTime">0:00/0:00</div>
+            </div>
+            <div class="controlBtn">
+                <i class="fa-solid fa-shuffle shuffle" style="color: #777272;"></i>
+                <i class="previousSong fa-solid fa-2x fa-backward-step"></i>
+                <i class="play fa-solid fa-2x fa-circle-play"></i>
+                <i class="nextSong fa-solid fa-2x fa-forward-step"></i>
+                <i class="fa-solid fa-repeat repeat" style="color: #777272;"></i>
+            </div>
+        </div>
+    </main>
+    <script src="songs.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/014ffa59e0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+</body>
+</html>
